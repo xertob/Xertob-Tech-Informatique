@@ -67,14 +67,14 @@ input, textarea {
 }
 button {
     padding: 10px 20px;
-    background-color: #238636;
+    background-color: #2386F6;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 button:hover {
-    background-color: #2ea043;
+    background-color: #2e92f0;
 }
 .highlights {
     display: flex;
