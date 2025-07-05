@@ -2,16 +2,16 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Xertob Tech Informatique - Dépannage, réparation, vente de PC reconditionnés et assemblage sur mesure.">
-    <title>Accueil - Xertob Tech Informatique</title>
+    <title>Accueil - Xertob Informatique</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="hero">
         <div class="hero-content">
-            <h1>Xertob Tech Informatique</h1>
-            <p class="slogan">L'informatique simple, rapide et sur mesure</p>
-            <nav class="nav-buttons">
+            <h1>Xertob Informatique</h1>
+            <p class="slogan">L'informatique simplifiée pour vous</p>
+            <button class="burger-menu" onclick="toggleMenu()">☰</button>
+<nav class="nav-buttons" id="navMenu">
                 <a href="index.html">Accueil</a>
                 <a href="services.html">Services</a>
                 <a href="commander.html">Commander un PC</a>
@@ -22,8 +22,8 @@
     </header>
     <main class="homepage-main">
         <section class="intro">
-            <h2>Bienvenue chez Xertob Tech Informatique</h2>
-            <p>Nous sommes spécialisés dans le dépannage, la réparation, la vente de PC reconditionnés et l’assemblage sur mesure. Que vous soyez un particulier ou un professionnel, nous vous offrons des solutions fiables, rapides et accessibles. Notre objectif : rendre l’informatique simple et efficace pour tous.</p>
+            <h2>Bienvenue chez Xertob Informatique</h2>
+            <p>Nous vous accompagnons pour tous vos besoins informatiques, que vous soyez particulier ou professionnel. Découvrez nos services adaptés à votre situation.</p>
         </section>
         <section class="highlights">
             <div class="card">
@@ -40,5 +40,13 @@
             </div>
         </section>
     </main>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById("navMenu");
+        nav.classList.toggle("active");
+    }
+</script>
+
 </body>
 </html>
