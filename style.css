@@ -1,4 +1,6 @@
 
+
+
 /* Menu burger caché sur desktop */
 .burger-menu {
     display: none;
@@ -7,26 +9,28 @@
     border: none;
     color: white;
     cursor: pointer;
+    z-index: 1001;
 }
 
-/* Cacher les liens sur mobile */
+/* Responsive navigation */
 @media (max-width: 768px) {
     .burger-menu {
         display: block;
         position: absolute;
-        top: 15px;
+        top: 20px;
         right: 20px;
     }
 
     .nav-buttons {
         display: none;
         flex-direction: column;
-        background-color: #333;
+        background-color: #222;
         position: absolute;
-        top: 60px;
+        top: 70px;
         right: 0;
         width: 100%;
-        z-index: 999;
+        padding: 10px 0;
+        z-index: 1000;
     }
 
     .nav-buttons.active {
@@ -34,10 +38,14 @@
     }
 
     .nav-buttons a {
-        padding: 10px;
+        padding: 10px 20px;
         color: white;
-        text-align: center;
+        text-align: left;
         text-decoration: none;
         border-top: 1px solid #444;
+    }
+
+    .hero-content {
+        padding-top: 80px;
     }
 }
