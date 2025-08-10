@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,58 +8,88 @@
 </head>
 <body>
     <header>
-        <h1>Contactez-nous</h1>
+        <h1>Xertob Tech Informatique</h1>
 
-        <button class="burger" onclick="toggleMenu()">☰</button>
+        <button class="burger" aria-label="Menu" onclick="toggleMenu()">☰</button>
         <nav class="nav-buttons" id="mobileMenu">
             <a href="index.html">Accueil</a>
             <a href="services.html">Services</a>
             <a href="commander.html">Commander un PC</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
             <a href="apropos.html">À propos</a>
         </nav>
-        <script>
-            function toggleMenu() {
-                const menu = document.getElementById("mobileMenu");
-                menu.classList.toggle("active");
-            }
-        </script>
     </header>
 
     <main>
-        <section class="content" style="max-width: 600px; margin: 40px auto;">
-            <form action="https://formspree.io/f/movwbrae" method="POST">
+        <section class="content" style="max-width: 600px; margin: 50px auto; text-align: center;">
+            <h2>Contactez-nous</h2>
+            <p>Une question ? Un projet ? Envoyez-nous un message, nous vous répondrons rapidement.</p>
+
+            <form action="https://formspree.io/f/movwbrae" method="POST" style="margin-top: 30px;">
                 <input
                     type="text"
                     name="name"
                     placeholder="Votre nom"
                     required
-                    style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 6px; border: 1px solid #30363d; background-color: #161b22; color: #c9d1d9;"
+                    autocomplete="name"
                 />
                 <input
                     type="email"
                     name="email"
                     placeholder="Votre email"
                     required
-                    style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 6px; border: 1px solid #30363d; background-color: #161b22; color: #c9d1d9;"
+                    autocomplete="email"
                 />
                 <textarea
                     name="message"
+                    rows="6"
                     placeholder="Votre message"
                     required
-                    rows="6"
-                    style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 6px; border: 1px solid #30363d; background-color: #161b22; color: #c9d1d9;"
                 ></textarea>
-                <button
-                    type="submit"
-                    style="padding: 12px 25px; background-color: #2386f6; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;"
-                    onmouseover="this.style.backgroundColor='#2e92f0'"
-                    onmouseout="this.style.backgroundColor='#2386f6'"
-                >
-                    Envoyer
-                </button>
+                <button type="submit">Envoyer</button>
             </form>
         </section>
     </main>
+
+    <footer>
+        © <span id="year"></span> Xertob Tech Informatique — Tous droits réservés
+    </footer>
+
+    <script>
+        // Menu burger toggle
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+
+        // Year dans le footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Thème clair/sombre selon préférence + bouton switch
+        const btnTheme = document.getElementById("theme-toggle");
+        const html = document.documentElement;
+
+        // Initial theme set from localStorage or system preference
+        function setTheme(theme) {
+            html.setAttribute("data-theme", theme);
+            localStorage.setItem("theme", theme);
+            if (theme === "dark") {
+                btnTheme.textContent = "☀️";
+            } else {
+                btnTheme.textContent = "🌙";
+            }
+        }
+
+        let savedTheme = localStorage.getItem("theme");
+        if (!savedTheme) {
+            savedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        setTheme(savedTheme);
+
+        btnTheme?.addEventListener("click", () => {
+            const current = html.getAttribute("data-theme");
+            setTheme(current === "dark" ? "light" : "dark");
+        });
+    </script>
 </body>
 </html>
