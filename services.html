@@ -1,47 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Xertob Informatique</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services - Xertob Tech Informatique</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-<h1>Nos Services</h1>
 
-<button class="burger" onclick="toggleMenu()">☰</button>
-<nav class="nav-buttons" id="mobileMenu">
-    <a href="index.html">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="commander.html">Commander un PC</a>
-    <a href="contact.html">Contact</a>
-    <a href="apropos.html">À propos</a>
-</nav>
-<script>
-function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.classList.toggle('active');
-}
-</script>
+  <!-- same header as index (copy/paste header block) -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <div class="logo">XT</div>
+        <div class="site-title"><div class="name">Xertob Tech</div><div class="small">Assistance & Assemblage</div></div>
+      </a>
+      <nav class="nav" role="navigation">
+        <div class="nav-links">
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="commander.html">Commander</a>
+          <a href="contact.html">Contact</a>
+          <a href="apropos.html">À propos</a>
+        </div>
+        <div class="controls">
+          <button id="theme-toggle" class="theme-btn">☀️</button>
+          <button id="burger-btn" class="burger">☰</button>
+        </div>
+      </nav>
+    </div>
+    <div id="mobileMenu" class="mobile-menu" style="display:none;">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="commander.html">Commander</a>
+      <a href="contact.html">Contact</a>
+      <a href="apropos.html">À propos</a>
+    </div>
+  </header>
 
-        
-        
-    </header>
-    <main>
-        <section class="content">
-            <ul>
-                <li>💻 Dépannage informatique — <strong>30€</strong></li>
-                <li>🔧 Réparation à distance — <strong>25€</strong></li>
-                <li>📦 Vente de PC reconditionnés — <strong>à partir de 150€</strong></li>
-                <li>⚙️ Assemblage de machines sur mesure — <strong>sur devis</strong></li>
-                <li>🧩 Nettoyage & optimisation — <strong>20€</strong></li>
-            </ul>
-            <p style="margin-top: 30px;">
-                💳 <strong>Paiement via PayPal</strong> — nous finalisons ensemble les détails par email après votre commande.  
-                Contactez-nous via la page <a href="contact.html">Contact</a> pour démarrer votre demande !
-            </p>
-        </section>
-    </main>
+  <main>
+    <section class="container section reveal">
+      <h2>Nos Services</h2>
+      <p class="small">Des prestations claires et adaptées à chaque besoin — pas de frais cachés.</p>
+
+      <div class="services-grid" style="margin-top:14px">
+        <article class="service-card reveal">
+          <div class="service-top">
+            <div class="service-ico">🔍</div>
+            <div>
+              <div class="service-title">Diagnostic & Dépannage</div>
+              <div class="small">Diagnostic complet, réparation sur place ou à distance.</div>
+            </div>
+            <div class="price">30€</div>
+          </div>
+          <p class="small" style="margin-top:8px">Réparation matériel & logiciel, démontage/nettoyage, remplacement composants.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-top">
+            <div class="service-ico">🛠️</div>
+            <div>
+              <div class="service-title">Réparation à distance</div>
+              <div class="small">Assistance sécurisée via prise en main à distance.</div>
+            </div>
+            <div class="price">25€</div>
+          </div>
+          <p class="small" style="margin-top:8px">Idéal pour dépannages rapides et optimisation logicielle.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-top">
+            <div class="service-ico">💻</div>
+            <div>
+              <div class="service-title">PC Reconditionnés</div>
+              <div class="small">Machines testées et garanties — prêtes à l'emploi.</div>
+            </div>
+            <div class="price">Dès 150€</div>
+          </div>
+          <p class="small" style="margin-top:8px">Nos reconditionnés sont optimisés et fournis avec une garantie.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-top">
+            <div class="service-ico">⚙️</div>
+            <div>
+              <div class="service-title">Assemblage sur mesure</div>
+              <div class="small">Conception selon usage (jeu, création, bureautique).</div>
+            </div>
+            <div class="price">Sur devis</div>
+          </div>
+          <p class="small" style="margin-top:8px">Choix de composants, montage, tests et optimisation.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-top">
+            <div class="service-ico">🧽</div>
+            <div>
+              <div class="service-title">Nettoyage & optimisation</div>
+              <div class="small">Boost des performances et suppression des logiciels indésirables.</div>
+            </div>
+            <div class="price">20€</div>
+          </div>
+          <p class="small" style="margin-top:8px">Nettoyage physique et optimisation logicielle pour prolonger la durée de vie.</p>
+        </article>
+      </div>
+
+      <p class="small" style="margin-top:18px">Pour commander ou demander un devis : <a href="commander.html">cliquez ici</a> ou <a href="contact.html">contactez-nous</a>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">© <span id="year2"></span> Xertob Tech — Tous droits réservés</footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
 </body>
 </html>

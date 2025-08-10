@@ -1,56 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Xertob Tech Informatique - Dépannage, réparation, vente de PC reconditionnés et assemblage sur mesure.">
-    <title>Accueil - Xertob Tech Informatique</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Accueil - Xertob Tech Informatique</title>
+  <meta name="description" content="Xertob Tech Informatique - dépannage, réparation, vente et assemblage sur mesure.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="hero-content">
-<h1>Xertob Tech Informatique</h1>
 
-<button class="burger" onclick="toggleMenu()">☰</button>
-<nav class="nav-buttons" id="mobileMenu">
-    <a href="index.html">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="commander.html">Commander un PC</a>
-    <a href="contact.html">Contact</a>
-    <a href="apropos.html">À propos</a>
-</nav>
-<script>
-function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.classList.toggle('active');
-}
-</script>
-
-            
-            <p class="slogan">L'informatique simple, rapide et sur mesure</p>
-            
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Accueil - Xertob Tech">
+        <div class="logo">XT</div>
+        <div class="site-title">
+          <div class="name">Xertob Tech</div>
+          <div class="small">Assistance & Assemblage</div>
         </div>
-    </header>
-    <main class="homepage-main">
-        <section class="intro">
-            <h2>Bienvenue chez Xertob Tech Informatique</h2>
-            <p>Nous sommes spécialisés dans le dépannage, la réparation, la vente de PC reconditionnés et l’assemblage sur mesure. Que vous soyez un particulier ou un professionnel, nous vous offrons des solutions fiables, rapides et accessibles. Notre objectif : rendre l’informatique simple et efficace pour tous.</p>
-        </section>
-        <section class="highlights">
-            <div class="card">
-                <h3>Dépannage</h3>
-                <p>Diagnostic rapide et réparation efficace sur site ou à distance.</p>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Menu principal">
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">Accueil</a>
+          <a href="services.html">Services</a>
+          <a href="commander.html">Commander</a>
+          <a href="contact.html">Contact</a>
+          <a href="apropos.html">À propos</a>
+        </div>
+
+        <div class="controls">
+          <button id="theme-toggle" class="theme-btn" aria-label="Changer le thème">☀️</button>
+          <button id="burger-btn" class="burger" aria-label="Ouvrir le menu">☰</button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu" style="display:none;">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="commander.html">Commander</a>
+      <a href="contact.html">Contact</a>
+      <a href="apropos.html">À propos</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container reveal">
+      <div class="hero-left">
+        <h1>Xertob Tech Informatique</h1>
+        <p class="small">L'informatique simple, rapide et sur mesure — dépannage, reconditionnement et assemblage sur mesure.</p>
+        <div class="hero-cta">
+          <a class="btn" href="services.html">Découvrir nos services</a>
+        </div>
+      </div>
+      <div class="hero-right" style="min-width:220px; text-align:right;">
+        <div class="small">Besoin d'aide maintenant ?</div>
+        <a class="btn" href="contact.html" style="margin-top:10px;display:inline-block">Contactez-nous</a>
+      </div>
+    </section>
+
+    <section class="container section reveal">
+      <h2>Nos points forts</h2>
+      <p class="small">Rapide — Transparent — Sur mesure</p>
+
+      <div class="services-grid" style="margin-top:14px">
+        <div class="service-card">
+          <div class="service-top">
+            <div class="service-ico">🔧</div>
+            <div>
+              <div class="service-title">Dépannage</div>
+              <div class="small">Sur site ou à distance, diagnostic rapide.</div>
             </div>
-            <div class="card">
-                <h3>Reconditionnement</h3>
-                <p>Ordinateurs remis à neuf, testés, performants et garantis.</p>
+            <div class="price">À partir de 30€</div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="service-ico">🖥️</div>
+            <div>
+              <div class="service-title">Reconditionné</div>
+              <div class="small">PC testés, réparés et garantis.</div>
             </div>
-            <div class="card">
-                <h3>Assemblage sur mesure</h3>
-                <p>Conception de PC puissants adaptés à vos besoins et à votre budget.</p>
+            <div class="price">Dès 150€</div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-top">
+            <div class="service-ico">⚙️</div>
+            <div>
+              <div class="service-title">Assemblage</div>
+              <div class="small">Config sur mesure, optimisation selon budget.</div>
             </div>
-        </section>
-    </main>
+            <div class="price">Sur devis</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Xertob Tech — Tous droits réservés</footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
