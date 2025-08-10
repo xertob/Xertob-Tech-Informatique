@@ -2,11 +2,10 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Contact - Xertob Tech</title>
+  <title>Commander un PC - Xertob Tech</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- header -->
   <header class="header">
     <div class="header-inner">
       <a class="brand" href="index.html"><div class="logo">XT</div><div class="site-title"><div class="name">Xertob Tech</div><div class="small">Assistance & Assemblage</div></div></a>
@@ -22,25 +21,27 @@
 
   <main>
     <section class="container section reveal">
-      <h2>Contactez-nous</h2>
-      <p class="small">Une question ? Un problème ? Écris-nous et nous te répondrons rapidement.</p>
+      <h2>Commander un PC sur mesure</h2>
+      <p class="small">Donne-nous quelques infos pour que nous puissions préparer un devis précis :</p>
 
       <form action="https://formspree.io/f/movwbrae" method="POST" style="margin-top:12px">
-        <input name="name" type="text" placeholder="Votre nom" required>
-        <input name="email" type="email" placeholder="Votre email" required>
-        <textarea name="message" placeholder="Votre message" required></textarea>
-        <button class="btn" type="submit">Envoyer</button>
+        <input name="nom" type="text" placeholder="Votre nom" required>
+        <input name="email" type="email" placeholder="Votre e-mail" required>
+        <div class="form-row">
+          <input name="budget" type="text" placeholder="Budget approximatif (ex : 600€)" required>
+          <input name="usage" type="text" placeholder="Usage principal (jeu, bureautique, création)" required>
+        </div>
+        <textarea name="details" placeholder="Précisions et préférences (marques, taille, écran...)" required></textarea>
+        <button class="btn" type="submit">Demander un devis</button>
       </form>
 
-      <div style="margin-top:16px" class="small">
-        Tu peux aussi suivre nos réseaux : <a href="#" style="color:var(--accent)">Instagram</a> • <a href="#" style="color:var(--accent)">TikTok</a>
-      </div>
+      <p class="small" style="margin-top:10px">Après réception de votre demande, nous revenons vers vous par e-mail avec un devis et les prochaines étapes.</p>
     </section>
   </main>
 
-  <footer class="footer">© <span id="year4"></span> Xertob Tech — Tous droits réservés</footer>
+  <footer class="footer">© <span id="year3"></span> Xertob Tech — Tous droits réservés</footer>
 
   <script src="script.js"></script>
-  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
 </body>
 </html>

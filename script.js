@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // mobile burger
   if(burger){
     burger.addEventListener('click', () => {
+      if(!mobileMenu) return;
       mobileMenu.classList.toggle('open');
       if(mobileMenu.classList.contains('open')){
         mobileMenu.style.display = 'flex';
