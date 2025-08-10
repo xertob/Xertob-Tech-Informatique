@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact - Xertob Tech Informatique</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Xertob Tech Informatique</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Contactez-nous</h1>
-    <button class="burger" onclick="toggleMenu()">☰</button>
-    <nav class="nav-buttons" id="mobileMenu">
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Services</a>
-      <a href="commander.html">Commander un PC</a>
-      <a href="contact.html">Contact</a>
-      <a href="apropos.html">À propos</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Contactez-nous</h1>
 
-  <main>
-    <section class="content">
-      <form action="https://formspree.io/f/movwbrae" method="POST">
-        <input type="text" name="name" placeholder="Votre nom" required />
-        <input type="email" name="email" placeholder="Votre email" required />
-        <textarea name="message" placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
-  </main>
+        <button class="burger" onclick="toggleMenu()">☰</button>
+        <nav class="nav-buttons" id="mobileMenu">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Services</a>
+            <a href="commander.html">Commander un PC</a>
+            <a href="contact.html">Contact</a>
+            <a href="apropos.html">À propos</a>
+        </nav>
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById("mobileMenu");
+                menu.classList.toggle("active");
+            }
+        </script>
+    </header>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('active');
-    }
-  </script>
+    <main>
+        <section class="content" style="max-width: 600px; margin: 40px auto;">
+            <form action="https://formspree.io/f/movwbrae" method="POST">
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Votre nom"
+                    required
+                    style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 6px; border: 1px solid #30363d; background-color: #161b22; color: #c9d1d9;"
+                />
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Votre email"
+                    required
+                    style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 6px; border: 1px solid #30363d; background-color: #161b22; color: #c9d1d9;"
+                />
+                <textarea
+                    name="message"
+                    placeholder="Votre message"
+                    required
+                    rows="6"
+                    style="width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 6px; border: 1px solid #30363d; background-color: #161b22; color: #c9d1d9;"
+                ></textarea>
+                <button
+                    type="submit"
+                    style="padding: 12px 25px; background-color: #2386f6; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;"
+                    onmouseover="this.style.backgroundColor='#2e92f0'"
+                    onmouseout="this.style.backgroundColor='#2386f6'"
+                >
+                    Envoyer
+                </button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
