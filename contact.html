@@ -1,48 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Commander un PC - Xertob Tech</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Xertob Tech Informatique</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- header (copier identique) -->
-  <header class="header">
-    <div class="header-inner">
-      <a class="brand" href="index.html"><div class="logo">XT</div><div class="site-title"><div class="name">Xertob Tech</div><div class="small">Assistance & Assemblage</div></div></a>
-      <nav class="nav">
-        <div class="nav-links"><a href="index.html">Accueil</a><a href="services.html">Services</a><a href="commander.html">Commander</a><a href="contact.html">Contact</a><a href="apropos.html">À propos</a></div>
-        <div class="controls"><button id="theme-toggle" class="theme-btn">☀️</button><button id="burger-btn" class="burger">☰</button></div>
-      </nav>
-    </div>
-    <div id="mobileMenu" class="mobile-menu" style="display:none;">
-      <a href="index.html">Accueil</a><a href="services.html">Services</a><a href="commander.html">Commander</a><a href="contact.html">Contact</a><a href="apropos.html">À propos</a>
-    </div>
+  <header>
+    <h1>Contactez-nous</h1>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <nav class="nav-buttons" id="mobileMenu">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="commander.html">Commander un PC</a>
+      <a href="contact.html">Contact</a>
+      <a href="apropos.html">À propos</a>
+    </nav>
   </header>
 
   <main>
-    <section class="container section reveal">
-      <h2>Commander un PC sur mesure</h2>
-      <p class="small">Donne-nous quelques infos pour que nous puissions préparer un devis précis :</p>
-
-      <form action="https://formspree.io/f/movwbrae" method="POST" style="margin-top:12px">
-        <input name="nom" type="text" placeholder="Votre nom" required>
-        <input name="email" type="email" placeholder="Votre e-mail" required>
-        <div class="form-row">
-          <input name="budget" type="text" placeholder="Budget approximatif (ex : 600€)" required>
-          <input name="usage" type="text" placeholder="Usage principal (jeu, bureautique, création)" required>
-        </div>
-        <textarea name="details" placeholder="Précisions et préférences (marques, taille, écran...)" required></textarea>
-        <button class="btn" type="submit">Demander un devis</button>
+    <section class="content">
+      <form action="https://formspree.io/f/movwbrae" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required />
+        <input type="email" name="email" placeholder="Votre email" required />
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
       </form>
-
-      <p class="small" style="margin-top:10px">Après réception de votre demande, nous revenons vers vous par e-mail avec un devis et les prochaines étapes.</p>
     </section>
   </main>
 
-  <footer class="footer">© <span id="year3"></span> Xertob Tech — Tous droits réservés</footer>
-
-  <script src="script.js"></script>
-  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
